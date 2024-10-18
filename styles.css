@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Rubik:ital@0;1&family=Work+Sans:ital,wght@0,900;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #371333;
+}
+
+/* NAVBAR */
+nav {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Hamburger Menu for Mobile */
+  #hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  #nav-menu {
+    display: none; /* Hidden initially */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-top: 50px;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #nav-menu ul li {
+    margin: 20px 0;
+  }
+  
+  #nav-menu ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Open the menu */
+  #nav-menu.open {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  /* Desktop View */
+  @media (min-width: 768px) {
+    #hamburger {
+      display: none; /* Hide hamburger on larger screens */
+    }
+  
+    #nav-menu {
+      position: static;
+      display: block;
+      height: auto;
+      width: 100%;
+      background-color: transparent;
+      transform: none;
+      transition: none;
+    }
+  
+    #nav-menu ul {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      margin: 0;
+      background-color: transparent;
+    }
+  
+    #nav-menu ul li a {
+      color: black; /* Change color for desktop */
+      font-size: 1.2rem;
+    }
+  }
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+}
+
+.header-image {
+    flex: 2;
+    background-image: url('./assets/header.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+
+.header-content {
+    flex: 1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #140B0F;
+    height: 100%;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #F3F4F4;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.header h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #C32957;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.main-content {
+    margin-left: 12.5rem;
+    padding: 1.25rem;
+    flex-grow: 1;
+}
+
+section {
+    padding: 2.5rem 1.25rem;
+    margin: 1.25rem 0;
+}
+
+.container {
+    margin-bottom: 3.125rem;
+    padding: 1.25rem;
+}
+
+.heading-container {
+    text-align: center; 
+}
+
+.heading {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-bottom: 1.25rem;
+    font-size: 2em;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #F3F4F4;
+
+}
+
+#about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#about-me-photo {
+    margin: 1.875rem;
+    width: 20rem;
+    height: auto;
+    border-radius: 3rem;
+    border: 10px solid #EBE0D0;
+}
+
+p[class="heading"] {
+    border: 3px solid #C32957;
+    background-color: #C32957;
+}
+
+#about-me-desc {
+    margin: 1.875rem;
+    width: 20rem;
+    padding: 1.5rem;
+    height: auto;
+    text-align: left;
+    font-family: "Cardo", serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-style: normal;
+    border: 30px solid #EBE0D0;
+    border-radius: 3rem;
+    background-color: #EBE0D0;
+    color: #140B0F;
+}
+
+#resume-skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+#resume {
+    margin: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #EBE0D0;
+    border-radius: 3rem;
+    background-color: #EBE0D0;
+    padding: 3rem 5rem 6rem;
+}
+
+.button {
+    width: auto;
+    padding: 0.625rem 1.25rem;
+    background-color: #EBE0D0;
+    color: #C32957;
+    border: 5px solid #C32957;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #C32957;
+    color: #EBE0D0;
+}
+
+#skills {
+    margin: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #EBE0D0;
+    border-radius: 3rem;
+    background-color: #EBE0D0;
+    padding: 3rem 5rem 6rem;
+}
+
+#skills-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-name {
+    text-align: center;
+}
+
+.img-skills {
+    width: 6.25rem;
+    height: auto;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.project-row-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #EBE0D0;
+    border-radius: 5%;
+    background-color: #EBE0D0;
+    padding: 2rem
+}
+
+.project-row img {
+    width: 100%;
+    height: auto;
+    max-width: 18.75rem; 
+}
+
+.project-title, .skills-name {
+    font-size: 1.2rem;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #C32957;
+}
+
+.project-desc {
+    margin-top: 0;
+    font-size: 1rem;
+    font-family: "Cardo", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #371333;
+}
+
+#contact-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 0.9375rem;
+}
+
+.form-group label {
+    color: #EBE0D0;
+}
+
+label {
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    margin-top: 0.3125rem;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 0.625rem 1.25rem;
+    background-color: #EBE0D0;
+    color: #C32957;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #C32957;
+    color: #EBE0D0;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem 0;
+    background-color: #371333;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .project-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+.navbar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+.navbar-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin: 0.625rem 0;
+}
+
+.navbar-links a {
+    font-size: 1.125rem;
+}
+
+.nav-toggle-label {
+    display: block;
+}
+
+.main-content {
+    margin-left: 0;
+    margin-top: 1.25rem;
+}
+
+.header {
+    flex-direction: column;
+    height: auto;
+}
+
+.header-image {
+    flex: none;
+    height: 30vh;
+    width: 100%;
+}
+
+.header-content {
+    flex: none;
+    width: 100%;
+    padding: 1rem;
+}
+
+#about-me, #resume-skills, #contact-group {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.project-row {
+    grid-template-columns: 1fr;
+}
+
+.project-row-items img {
+    max-width: 100%;
+}
+
+}
